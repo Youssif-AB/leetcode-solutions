@@ -16,7 +16,7 @@ class Solution(object):
                 print("index is: " + str(index))
             else:
                 right = mid - 1
-                index = mid if mid != 0 else 0
+                index = mid 
 
 
         return index
