@@ -5,6 +5,6 @@ class Solution(object):
             if s[i] != " ":
                 count += 1
             
-            if i != 0 and s[i - 1] == " " and s[i] != " ":
+            if s[i - 1] == " " and s[i] != " ":
                 break
         return count
