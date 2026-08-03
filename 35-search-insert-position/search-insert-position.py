@@ -6,14 +6,12 @@ class Solution(object):
         while left <= right:
             mid = (left + right) // 2
 
-            print(nums[mid])
             if nums[mid] == target:
                 return mid
 
             if nums[mid] < target:
                 left = mid + 1
                 index = mid + 1
-                print("index is: " + str(index))
             else:
                 right = mid - 1
                 index = mid 
