@@ -4,8 +4,10 @@ class Solution(object):
         finallist = []
         for i in digits:
             num += str(i)
+        
+        num = str(int(num) + 1)
 
-        for i in str(int(num) + 1):
+        for i in num:
             finallist.append(int(i))
         
         return finallist
