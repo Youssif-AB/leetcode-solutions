@@ -7,7 +7,7 @@ class Solution(object):
         
         num = str(int(num) + 1)
 
-        for i in str(num):
+        for i in num:
             finallist.append(int(i))
         
         return finallist
