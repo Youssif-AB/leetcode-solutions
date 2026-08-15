@@ -4,11 +4,8 @@ class Solution(object):
         svowels = []
         for i in s:
             if i in vowels:
-                print(i)
                 svowels.append(i)
-        print(svowels)
         svowels.reverse()
-        print(svowels)
         counter = 0
         for i in range(len(s)):
             if s[i] in vowels:
