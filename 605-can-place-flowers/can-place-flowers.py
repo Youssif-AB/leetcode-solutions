@@ -15,18 +15,14 @@ class Solution(object):
                     if flowerbed[i + 1] == 0:
                         planter += 1
                         flowerbed[i] = 1
-                        print("true 1")
                 elif i == len(flowerbed) - 1:
                     if flowerbed[i - 1] == 0:
                         planter += 1
                         flowerbed[i] = 1
-                        print("true2")
                 elif flowerbed[i + 1] == 0:
                     if flowerbed[i - 1] == 0:
                         planter += 1
                         flowerbed[i] = 1
-                        print("true3")
-                    
         return planter >= n
                 
         
