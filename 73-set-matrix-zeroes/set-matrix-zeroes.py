@@ -1,22 +1,20 @@
 class Solution:
     def setZeroes(self, matrix: list[list[int]]) -> None:
-        reference = []
+        rows_to_rem = []
+        cols_to_rem = []
 
-        nums = []
         for i in range(len(matrix)):
             for j in range(len(matrix[i])):
-                nums.append(matrix[i][j])
-            reference.append(nums)
-            nums = []
+                if matrix[i][j] == 0:
+                    rows_to_rem.append(i)
+                    cols_to_rem.append(j)
 
-        print(reference)
-        for i in range(len(reference)):
-            for j in range(len(reference[i])):
-                if reference[i][j] == 0:
-                    print(reference[i][j])
-                    for q in range(0, len(reference[i])):
-                        matrix[i][q] = 0
-                    for z in range(0, len(reference)):
-                        matrix[z][j] = 0
+
+        for i in range(len(matrix)):
+            if i in rows_to_rem:
+                matrix[i] = [x * 0 for x in matrix[i]]
+            for j in range(len(matrix[i])):
+                if j in cols_to_rem:
+                    matrix[i][j] = 0
         
         
